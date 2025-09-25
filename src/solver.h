@@ -87,9 +87,9 @@ struct PreorderData {
   Area area;  // The total area (i.e., space x time) consumed by this buffer.
   TimeValue lower;  // When does the buffer start?
   uint64_t overlaps;  // The number of pairwise overlaps with other buffers.
-  int sections;  // The number of sections spanned by this buffer.
+  int64_t sections;  // The number of sections spanned by this buffer.
   int64_t size;  // The size of the buffer.
-  int total;  // The (maximum) total sum in any of this buffer's sections.
+  int64_t total;  // The (maximum) total sum in any of this buffer's sections.
   TimeValue upper;  // When does the buffer end?
   int64_t width;  // The width of this buffer's lifespan.
   BufferIdx buffer_idx;  // An index into a Problem's list of buffers.

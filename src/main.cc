@@ -84,9 +84,9 @@ void PrintSolution(const minimalloc::Problem& problem,
   }
   const float scale_x = kWidth / (max_time - min_time);
   const float scale_y = kHeight / problem.capacity;
-  for (int buffer_idx = 0; buffer_idx < problem.buffers.size(); ++buffer_idx) {
+  for (int64_t buffer_idx = 0; buffer_idx < problem.buffers.size(); ++buffer_idx) {
     const minimalloc::Buffer& buffer = problem.buffers[buffer_idx];
-    for (int i = 0; i <= buffer.gaps.size(); ++i) {
+    for (int64_t i = 0; i <= buffer.gaps.size(); ++i) {
       auto left = (i == 0) ? buffer.lifespan.lower()
                            : buffer.gaps[i - 1].lifespan.upper();
       auto right = (i == buffer.gaps.size()) ? buffer.lifespan.upper()

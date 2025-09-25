@@ -26,10 +26,10 @@ limitations under the License.
 namespace minimalloc {
 
 // An index into a list of schedule "cross sections."
-using SectionIdx = int;
+using SectionIdx = int64_t;
 
 // A count of buffers crossing between adjacent sections.
-using CutCount = int;
+using CutCount = int64_t;
 
 // An interval that defines a subset of ranges (e.g., where a buffer is
 // continuously active).
